@@ -218,8 +218,8 @@
       if (!linkHref || linkHref.indexOf('#') === 0) continue;
 
       var linkPath = linkHref.split('#')[0];
-      var normalizedLinkPath = linkPath.replace(/^.?//, '');
-      var normalizedCurrentPath = currentPath.replace(/^//, '');
+      var normalizedLinkPath = linkPath.replace(/^\.?\//, '');
+      var normalizedCurrentPath = currentPath.replace(/^\//, '');
 
       if (normalizedLinkPath === '' || normalizedLinkPath === 'index.html') {
         normalizedLinkPath = '';
@@ -332,17 +332,17 @@
         errorMsg = 'Šis lauks ir obligāts';
       } else if (value) {
         if (type === 'email' || id.toLowerCase().includes('email')) {
-          var emailRegex = /^[^s@]+@[^s@]+.[^s@]+$/;
+          var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
           if (!emailRegex.test(value)) {
             errorMsg = 'Lūdzu, ievadiet derīgu e-pasta adresi';
           }
         } else if (type === 'tel' || id.toLowerCase().includes('phone')) {
-          var phoneRegex = /^[ds+()-]{10,20}$/;
+          var phoneRegex = /^[\d\s+()-]{10,20}$/;
           if (!phoneRegex.test(value)) {
             errorMsg = 'Lūdzu, ievadiet derīgu tālruņa numuru';
           }
         } else if (id.toLowerCase().includes('name') || fieldName.toLowerCase().includes('name')) {
-          var nameRegex = /^[a-zA-ZÀ-ÿs-']{2,50}$/;
+          var nameRegex = /^[a-zA-ZÀ-ÿ\s-']{2,50}$/;
           if (!nameRegex.test(value)) {
             errorMsg = 'Vārds drīkst saturēt tikai burtus (2-50 rakstzīmes)';
           }

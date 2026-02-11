@@ -1,4 +1,70 @@
 <!DOCTYPE html><html lang="lv"><head>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://domain.com/#org",
+      "name": "domain",
+      "url": "https://domain.com",
+      "email": "office@domain.com",
+      "telephone": "+371 6 0406295",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Skanste City, Skanstes iela 50, Floor 3, Office 709, LV-1013 Rīga"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "email": "office@domain.com",
+        "telephone": "+371 6 0406295"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://domain.com/#website",
+      "url": "https://domain.com",
+      "name": "domain",
+      "publisher": {
+        "@id": "https://domain.com/#org"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://domain.com/privacy.html#webpage",
+      "url": "https://domain.com/privacy.html",
+      "name": "Privātuma politika | domain",
+      "isPartOf": {
+        "@id": "https://domain.com/#website"
+      },
+      "about": {
+        "@id": "https://domain.com/#org"
+      },
+      "inLanguage": "lv",
+      "description": "Izlasiet domain privātuma politiku. Uzziniet, kā mēs vācam, izmantojam un aizsargājam jūsu personas datus saskaņā ar GDPR prasībām."
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://domain.com/privacy.html#breadcrumbs",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://domain.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Privacy.Html",
+          "item": "https://domain.com/privacy.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Privātuma politika | domain</title>
@@ -11,32 +77,34 @@
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" href="/favicon.png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
- </head>
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+<link rel="stylesheet" href="./header-footer.css">
+<link rel="stylesheet" href="./consent.css">
+<script src="./consent.js"></script>
+</head>
  <body>
-  <header>
-   <nav class="navbar navbar-expand-md sticky-top bg-white border-bottom" aria-label="Galvenā navigācija">
-    <div class="container">
-     <a class="navbar-brand d-flex align-items-center" href="/"> 
-      <div class="ratio ratio-1x1" style="width:40px;height:40px;">
-       <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <circle cx="50" cy="50" r="48" fill="var(--bs-primary)"></circle> <path d="M30 50L45 65L70 35" stroke="white" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"></path>
-       </svg>
-      </div> 
-      <span class="ms-2 fw-bold">AutoDrošība</span> 
-     </a> <a href="#kontakti" class="btn btn-primary d-md-none ms-auto me-2">Saņemt Piedāvājumu</a>
-     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Pārslēgt navigāciju"><span class="navbar-toggler-icon"></span></button>
-     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto align-items-md-center">
-       <li class="nav-item"><a class="nav-link" href="/" aria-current="page">Sākums</a></li>
-       <li class="nav-item"><a class="nav-link" href="about.html">Par Mums</a></li>
-       <li class="nav-item"><a class="nav-link" href="services.html">Pakalpojumi</a></li>
-       <li class="nav-item"><a class="nav-link" href="contact.html">Kontakti</a></li>
-       <li class="nav-item ms-md-3"><a href="#kontakti" class="btn btn-primary d-none d-md-inline-block">Saņemt Piedāvājumu</a></li>
+<header class="dr-header" data-dr-variant="v1">
+  <div class="dr-header-inner">
+    <a class="dr-logo" href="./index.html" aria-label="domain">domain</a>
+
+    <nav class="dr-nav" aria-label="Primary navigation">
+      <ul class="dr-nav-list">
+        <li class="dr-nav-item"><a class="dr-nav-link" href="./index.html">Home</a></li><li class="dr-nav-item"><a class="dr-nav-link" href="./about.html">About</a></li><li class="dr-nav-item"><a class="dr-nav-link" href="./contact.html">Contact</a></li><li class="dr-nav-item"><a class="dr-nav-link" href="./services.html">Services</a></li>
       </ul>
-     </div>
-    </div>
-   </nav>
-  </header>
+    </nav>
+
+    <button class="dr-burger" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="dr-mobile-menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<nav class="dr-mobile-menu" id="dr-mobile-menu" aria-label="Mobile navigation">
+  <ul class="dr-mobile-nav-list">
+    <li class="dr-nav-item"><a class="dr-nav-link" href="./index.html">Home</a></li><li class="dr-nav-item"><a class="dr-nav-link" href="./about.html">About</a></li><li class="dr-nav-item"><a class="dr-nav-link" href="./contact.html">Contact</a></li><li class="dr-nav-item"><a class="dr-nav-link" href="./services.html">Services</a></li>
+  </ul>
+</nav>
+
   <main>
    <section class="py-4 py-md-5 bg-light">
     <div class="container">
@@ -64,11 +132,11 @@
          <h2 class="h4 fw-bold mb-3">2. Datu pārzinis</h2>
          <p><strong>Uzņēmuma nosaukums:</strong> domain
           <br>
-          <strong>Adrese:</strong> {address}
+          <strong>Adrese:</strong> Skanste City, Skanstes iela 50, Floor 3, Office 709, LV-1013 Rīga
           <br>
-          <strong>Tālrunis:</strong> {telephone}
+          <strong>Tālrunis:</strong> +371 6 0406295
           <br>
-          <strong>E-pasts:</strong> info@domain.com</p>
+          <strong>E-pasts:</strong> office@domain.com</p>
         </div>
         <div class="mb-5">
          <h2 class="h4 fw-bold mb-3">3. Kādus personas datus mēs vācam</h2>
@@ -184,11 +252,11 @@
           <li><strong>Tiesības iesniegt sūdzību:</strong> jūs varat iesniegt sūdzību uzraudzības iestādē</li>
          </ul>
          <p>Lai izmantotu savas tiesības, lūdzu, sazinieties ar mums:</p>
-         <p><strong>E-pasts:</strong> info@domain.com
+         <p><strong>E-pasts:</strong> office@domain.com
           <br>
-          <strong>Tālrunis:</strong> {telephone}
+          <strong>Tālrunis:</strong> +371 6 0406295
           <br>
-          <strong>Adrese:</strong> {address}</p>
+          <strong>Adrese:</strong> Skanste City, Skanstes iela 50, Floor 3, Office 709, LV-1013 Rīga</p>
          <p>Mēs atbildēsim uz jūsu pieprasījumu 30 dienu laikā.</p>
         </div>
         <div class="mb-5">
@@ -225,9 +293,9 @@
          <div class="card">
           <div class="card-body">
            <p class="mb-2"><strong>domain</strong></p>
-           <p class="mb-2"><strong>Adrese:</strong> {address}</p>
-           <p class="mb-2"><strong>Tālrunis:</strong> {telephone}</p>
-           <p class="mb-2"><strong>E-pasts:</strong> info@domain.com</p>
+           <p class="mb-2"><strong>Adrese:</strong> Skanste City, Skanstes iela 50, Floor 3, Office 709, LV-1013 Rīga</p>
+           <p class="mb-2"><strong>Tālrunis:</strong> +371 6 0406295</p>
+           <p class="mb-2"><strong>E-pasts:</strong> office@domain.com</p>
            <p class="mb-0"><strong>Darba laiks:</strong> Pirmdien-Piektdien, 9:00-18:00</p>
           </div>
          </div>
@@ -241,7 +309,7 @@
           <br>
           Tālrunis: +371 67 22 31 31
           <br>
-          E-pasts: info@domain.com
+          E-pasts: office@domain.com
           <br>
           Mājaslapa: www.dvi.gov.lv</p>
         </div>
@@ -254,57 +322,60 @@
     </div>
    </section>
   </main>
-  <footer class="footer bg-dark text-white py-4 py-md-5">
-   <div class="container">
-    <div class="row g-4">
-     <div class="col-md-6 col-lg-4">
-      <h2 class="h5 fw-bold mb-3">AutoDrošība</h2>
-      <p class="small text-white-50">Jūsu uzticamais partneris automašīnu apdrošināšanā Latvijā. Piedāvājam OCTA, KASKO un ceļu palīdzības pakalpojumus ar labākajām cenām un ātru apkalpošanu.</p>
-      <div class="mt-3">
-       <a href="mailto:info@domain.com" class="text-white-50 text-decoration-none small d-block mb-2">info@domain.com</a> <a href="tel:{telephone}" class="text-white-50 text-decoration-none small d-block mb-2">{telephone}</a>
-       <address class="text-white-50 small mb-0">{address}</address>
+  <footer class="dr-footer">
+  <div class="dr-footer-inner">
+    <div class="dr-footer-brand-block">
+      <div class="dr-footer-logo">AutoDrošība</div>
+      <p class="dr-footer-desc">Droša un uzticama izvēle jūsu transportlīdzeklim.</p>
+    </div>
+    <div class="dr-footer-grid">
+      <nav class="dr-footer-nav" aria-label="Galvenā navigācija">
+        <h2 class="dr-footer-heading">Navigācija</h2>
+        <ul class="dr-footer-nav-list">
+          <li class="dr-footer-nav-item"><a href="./index.html" class="dr-footer-link">Home</a></li>
+          <li class="dr-footer-nav-item"><a href="./about.html" class="dr-footer-link">About</a></li>
+          <li class="dr-footer-nav-item"><a href="./contact.html" class="dr-footer-link">Contact</a></li>
+          <li class="dr-footer-nav-item"><a href="./services.html" class="dr-footer-link">Services</a></li>
+        </ul>
+      </nav>
+      <nav class="dr-footer-legal" aria-label="Juridiskā informācija">
+        <h2 class="dr-footer-heading">Juridiskā informācija</h2>
+        <ul class="dr-footer-legal-list">
+          <li class="dr-footer-legal-item"><a href="./privacy.html" class="dr-footer-link">Privacy Policy</a></li>
+          <li class="dr-footer-legal-item"><a href="./terms_of_services.html" class="dr-footer-link">Terms of Service</a></li>
+          <li class="dr-footer-legal-item"><a href="./terms_and_conditions.html" class="dr-footer-link">Terms and Conditions</a></li>
+          <li class="dr-footer-legal-item"><a href="./cookie_policy.html" class="dr-footer-link">Cookie Policy</a></li>
+          <li class="dr-footer-legal-item"><a href="./gdpr-rights.html" class="dr-footer-link">GDPR Rights</a></li>
+          <li class="dr-footer-legal-item"><a href="./impressum.html" class="dr-footer-link">Impressum</a></li>
+        </ul>
+      </nav>
+      <div class="dr-footer-contact">
+        <h2 class="dr-footer-heading">Kontaktinformācija</h2>
+        <ul class="dr-footer-contact-list">
+          <li class="dr-footer-contact-item"><span class="dr-footer-contact-label">Adrese:</span> <span class="dr-footer-contact-value">Skanste City, Skanstes iela 50, Floor 3, Office 709, LV-1013 Rīga</span></li>
+          <li class="dr-footer-contact-item"><span class="dr-footer-contact-label">Tālrunis:</span> <a href="tel:+371 6 0406295" class="dr-footer-link">+371 6 0406295</a></li>
+          <li class="dr-footer-contact-item"><span class="dr-footer-contact-label">E-pasts:</span> <a href="mailto:office@domain.com" class="dr-footer-link">office@domain.com</a></li>
+        </ul>
       </div>
-     </div>
-     <div class="col-md-6 col-lg-2">
-      <h3 class="h6 fw-bold mb-3">Pakalpojumi</h3>
-      <ul class="list-unstyled">
-       <li class="mb-2"><a href="services.html#octa" class="text-white-50 text-decoration-none small">OCTA</a></li>
-       <li class="mb-2"><a href="services.html#kasko" class="text-white-50 text-decoration-none small">KASKO</a></li>
-       <li class="mb-2"><a href="services.html#roadside" class="text-white-50 text-decoration-none small">Ceļu Palīdzība</a></li>
-       <li class="mb-2"><a href="services.html" class="text-white-50 text-decoration-none small">Visi Pakalpojumi</a></li>
-      </ul>
-     </div>
-     <div class="col-md-6 col-lg-3">
-      <h3 class="h6 fw-bold mb-3">Uzņēmums</h3>
-      <ul class="list-unstyled">
-       <li class="mb-2"><a href="about.html" class="text-white-50 text-decoration-none small">Par Mums</a></li>
-       <li class="mb-2"><a href="contact.html" class="text-white-50 text-decoration-none small">Kontakti</a></li>
-       <li class="mb-2"><a href="/#biezak-uzdotie-jautajumi" class="text-white-50 text-decoration-none small">BUJ</a></li>
-       <li class="mb-2"><a href="impressum.html" class="text-white-50 text-decoration-none small">Impressum</a></li>
-      </ul>
-     </div>
-     <div class="col-md-6 col-lg-3">
-      <h3 class="h6 fw-bold mb-3">Juridiskā Informācija</h3>
-      <ul class="list-unstyled">
-       <li class="mb-2"><a href="privacy.html" class="text-white-50 text-decoration-none small">Privātuma Politika</a></li>
-       <li class="mb-2"><a href="terms_and_conditions.html" class="text-white-50 text-decoration-none small">Noteikumi un Nosacījumi</a></li>
-       <li class="mb-2"><a href="terms_of_services.html" class="text-white-50 text-decoration-none small">Pakalpojumu Noteikumi</a></li>
-       <li class="mb-2"><a href="cookie_policy.html" class="text-white-50 text-decoration-none small">Sīkdatņu Politika</a></li>
-       <li class="mb-2"><a href="gdpr-rights.html" class="text-white-50 text-decoration-none small">GDPR Tiesības</a></li>
-      </ul>
-     </div>
     </div>
-    <hr class="my-4 border-white-50">
-    <div class="row">
-     <div class="col-md-6">
-      <p class="small text-white-50 mb-0">© 2025 AutoDrošība. Visas tiesības aizsargātas.</p>
-     </div>
-     <div class="col-md-6 text-md-end">
-      <p class="small text-white-50 mb-0">Izstrādāts ar rūpību Latvijā</p>
-     </div>
-    </div>
-   </div>
-  </footer>
-  <script src="script.js" defer=""></script>
+  </div>
+  <div class="dr-footer-bottom">
+    <p class="dr-footer-disclaimer">Šī vietne ir paredzēta tikai informatīviem nolūkiem. Nekas šeit nav uzskatāms par juridisku vai profesionālu konsultāciju. Zīmols domain un vietne domain.com neuzņemas atbildību par jebkādām darbībām, kas veiktas, balstoties uz šeit sniegto informāciju.</p>
+    <p class="dr-footer-meta"><span class="dr-year"></span> © domain. All rights reserved.</p>
+  </div>
+</footer>
+  
  
+  
+  
+
+<script src="script.js" defer=""></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+if (typeof AOS !== "undefined" && !window.__AOS_INITIALIZED__) {
+  AOS.init({ once: true, duration: 700, easing: "ease-out-cubic" });
+  window.__AOS_INITIALIZED__ = true;
+}
+</script>
+<script src="./header-footer.js"></script>
 </body></html>
